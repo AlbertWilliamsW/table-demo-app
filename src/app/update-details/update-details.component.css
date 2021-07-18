@@ -1,0 +1,8 @@
+.example-full-width {
+    width: 100%;
+  }
+
+  div[mat-dialog-actions]{
+    float: right;
+    margin-right: 30px;
+  }

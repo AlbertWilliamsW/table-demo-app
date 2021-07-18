@@ -1,0 +1,28 @@
+<div class="main-content container">
+    <div>
+        <h1>TABLE</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">BODY</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">TITLE</th>
+                    <th scope="col">USER-ID</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="aligning" *ngFor="let data of receivedData; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td scope="row">{{data.body}}</td>
+                    <td class="id-field" scope="row">{{data.id}}</td>
+                    <td scope="row">{{data.title}}</td>
+                    <td class="userId-field" scope="row">{{data.userId}}</td>
+                    <td><button mat-raised-button color="primary" (click)="editData(i)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

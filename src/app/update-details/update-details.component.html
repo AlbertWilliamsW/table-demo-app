@@ -1,0 +1,58 @@
+<!-- <div mat-dialog-title>Update Details</div>
+
+<mat-dialog-content [formGroup]="dataForm">    
+    <mat-form-field class="example-full-width">
+        <textarea  matInput placeholder="BODY" 
+        formControlName="body"></textarea> 
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="ID" 
+        formControlName="id">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="TITLE" 
+        formControlName="title"> </textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="USER-ID" 
+        formControlName="userId">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button type="" (click)="close()">Close</button>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions> -->
+
+<form [formGroup]="dataForm">
+    <div mat-dialog-content>
+        <div mat-dialog-title>Update Details</div>
+    
+        <mat-form-field class="example-full-width">
+            <textarea cdkTextareaAutosize
+            cdkAutosizeMinRows="3"
+            matInput placeholder="BODY" formControlName="body"></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="ID" formControlName="id">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <textarea cdkTextareaAutosize
+            cdkAutosizeMinRows="3"
+            matInput placeholder="TITLE" formControlName="title"> </textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="USER-ID" formControlName="userId">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button type="submit" (click)="close()">Close</button>
+        <button mat-raised-button type="submit" mat-dialog-close (click)="save()" color="primary">Save</button>
+    </div>
+</form>
